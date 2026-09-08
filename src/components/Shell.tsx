@@ -4,7 +4,7 @@ import { signOut } from "firebase/auth";
 import {
   LayoutDashboard, Store, Workflow, Bot, CheckSquare,
   ListTodo, BarChart3, Settings,
-  Search, Bell, ChevronsLeftRight, ShieldCheck, LogOut,
+  Search, Bell, ChevronsLeftRight, ShieldCheck, LogOut, ClipboardCheck,
 } from "lucide-react";
 import CommandBar from "./CommandBar";
 import NotificationPanel from "./NotificationPanel";
@@ -49,9 +49,9 @@ export default function Shell({ children }: { children: ReactNode }) {
     <div className="app-shell flex h-screen w-full overflow-hidden bg-paper text-ink">
       <aside className="app-sidebar flex w-60 shrink-0 flex-col border-r border-border bg-surface">
         <div className="flex items-center gap-2 border-b border-border px-4 py-4">
-          <div className="flex h-8 w-8 items-center justify-center rounded bg-brand-500 text-sm font-bold text-white">P</div>
+          <div className="flex h-8 w-8 items-center justify-center rounded bg-brand-500 text-white"><ClipboardCheck size={17} /></div>
           <div>
-            <div className="text-sm font-semibold leading-tight">PRESMA SuperApp</div>
+            <div className="text-sm font-semibold leading-tight">Restaurant On-Boarding System</div>
             <div className="text-[11px] leading-tight text-ink-faint">Operations Command Centre</div>
           </div>
         </div>
