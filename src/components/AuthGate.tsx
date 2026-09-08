@@ -1,5 +1,6 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { onAuthStateChanged, signInWithPopup, signOut, type User } from "firebase/auth";
+import { ClipboardCheck } from "lucide-react";
 import { auth, googleProvider, ADMIN_EMAIL } from "../lib/firebase";
 import { ensureAccessRequest, type AccessRecord } from "../lib/access";
 import { AuthContext } from "../lib/AuthContext";
@@ -7,7 +8,7 @@ import { AuthContext } from "../lib/AuthContext";
 function Frame({ children }: { children: ReactNode }) {
   return (
     <div className="flex h-screen w-full flex-col items-center justify-center gap-3 bg-paper px-6 text-center">
-      <div className="flex h-11 w-11 items-center justify-center rounded bg-brand-500 text-base font-bold text-white">P</div>
+      <div className="flex h-11 w-11 items-center justify-center rounded bg-brand-500 text-white"><ClipboardCheck size={20} /></div>
       {children}
     </div>
   );
@@ -53,7 +54,7 @@ export default function AuthGate({ children }: { children: ReactNode }) {
   if (!user) {
     return (
       <Frame>
-        <h1 className="text-lg font-semibold text-ink">PRESMA SuperApp</h1>
+        <h1 className="text-lg font-semibold text-ink">Restaurant On-Boarding System</h1>
         <p className="max-w-sm text-sm text-ink-faint">Sign in with your Google account to request access. An administrator will need to approve your account before you can enter.</p>
         {authError && <p className="max-w-sm text-xs text-status-red">{authError}</p>}
         <button
@@ -95,7 +96,7 @@ export default function AuthGate({ children }: { children: ReactNode }) {
     return (
       <Frame>
         <h1 className="text-lg font-semibold text-ink">Access denied</h1>
-        <p className="max-w-sm text-sm text-ink-faint">Your request to access PRESMA SuperApp was not approved. Contact the administrator if you believe this is a mistake.</p>
+        <p className="max-w-sm text-sm text-ink-faint">Your request to access Restaurant On-Boarding System was not approved. Contact the administrator if you believe this is a mistake.</p>
         <button onClick={() => signOut(auth)} className="mt-2 text-sm text-ink-faint hover:underline">Sign out</button>
       </Frame>
     );
