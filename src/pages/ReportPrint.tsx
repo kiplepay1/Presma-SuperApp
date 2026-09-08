@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { ArrowLeft, Printer, Download } from "lucide-react";
+import { ArrowLeft, Printer, Download, ClipboardCheck } from "lucide-react";
 import { useRestaurants } from "../lib/useRestaurants";
 import { useAuth } from "../lib/AuthContext";
 import { buildRecommendations } from "../lib/agents";
@@ -37,8 +37,8 @@ export default function ReportPrint() {
         <div className="flex items-start justify-between border-b border-border pb-4">
           <div>
             <div className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded bg-brand-500 text-sm font-bold text-white">P</div>
-              <div className="text-base font-semibold">PRESMA SuperApp — Onboarding Report</div>
+              <div className="flex h-8 w-8 items-center justify-center rounded bg-brand-500 text-white"><ClipboardCheck size={17} /></div>
+              <div className="text-base font-semibold">Restaurant On-Boarding System — Onboarding Report</div>
             </div>
             <p className="mt-1 text-xs text-ink-faint">Generated {new Date().toLocaleString()} by {user.email}</p>
           </div>
