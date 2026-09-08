@@ -41,7 +41,7 @@ export default function AdminAccess() {
     <div className="space-y-6">
       <div>
         <h1 className="text-xl font-semibold">Access Control</h1>
-        <p className="text-sm text-ink-faint">Approve or reject who can sign in to PRESMA SuperApp with their Google account.</p>
+        <p className="text-sm text-ink-faint">Approve or reject who can sign in to Restaurant On-Boarding System with their Google account.</p>
       </div>
 
       <SectionCard title={`Pending Requests (${pending.length})`}>
