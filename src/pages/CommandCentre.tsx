@@ -33,7 +33,7 @@ export default function CommandCentre() {
   if (restaurants.length === 0) {
     return (
       <div className="mx-auto max-w-md py-20 text-center">
-        <h1 className="text-lg font-semibold">Welcome to PRESMA SuperApp</h1>
+        <h1 className="text-lg font-semibold">Welcome to Restaurant On-Boarding System</h1>
         <p className="mt-2 text-sm text-ink-faint">No restaurants yet. Add your first one from the Restaurants page to see live counts, pipeline stages, and AI insights here.</p>
         <button onClick={() => navigate("/restaurants")} className="mt-4 rounded bg-brand-500 px-4 py-2 text-sm font-medium text-white hover:bg-brand-600">Go to Restaurants</button>
       </div>
